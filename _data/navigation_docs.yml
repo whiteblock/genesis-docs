@@ -1,0 +1,33 @@
+- title: About Whiteblock Genesis
+  docs:
+  - url: /
+    title: Introduction
+  - url: /introduction_to_testing.html
+    title: Introduction to Testing Distributed Systems
+- title: Getting Started
+  docs:
+  - url: /quick_start.html
+    title: Quick Start
+  - url: /defining_tests.html
+    title: Defining Tests
+  - url: /running_tests.html
+    title: Running Tests
+  - url: /analyzing_test_data.html
+    title: Analyzing Test Data
+
+- title: Your Account
+  docs:
+  - url: /account_management.html
+    title: Account Management
+  - url: /organization_management.html
+    title: Organization Management
+
+- title: Reference Material
+  docs:
+  - url: /schema.html
+    title: Schema Reference
+
+- title: Help
+  docs:
+  - url: /support.html
+    title: Support
