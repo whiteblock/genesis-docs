@@ -1,0 +1,16 @@
+<div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        {% for section in site.data.navigation_docs %}
+        <h5>{{ section.title }}</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+            {% for doc in section.docs %}
+            <li class="{% if doc.url == page.url %}uk-active{% endif %}"><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+
+    </div>
+</div>

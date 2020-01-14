@@ -1,0 +1,17 @@
+# Navbar left menu navigation links
+
+left:
+  - title: Genesis
+    url: https://whiteblock.io/genesis/
+
+  - title: Documentation
+    url: /
+
+  - title: Team
+    url: https://whiteblock.io/team/
+
+  - title: Careers
+    url: https://whiteblock.io/careers/
+
+  - title: Contact
+    url: https://whiteblock.io/contact/

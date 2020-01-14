@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Whiteblock Documentation Website
+name: genesis-docs
+version: 0.1.0
