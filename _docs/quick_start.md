@@ -190,6 +190,6 @@ genesis run <path to your YAML file> <your-username>
 
 ### Step 4 - View Logs from the Test
 * Log into the [Genesis Dashboard](https://genesis.whiteblock.io/login).
-* Navigate to Logs in the left sidebar.
+* Navigate to Tests in the left sidebar and choose your test run.
 
 Congratulations! Welcome to #WhiteblockWorld.
