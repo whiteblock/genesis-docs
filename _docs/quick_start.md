@@ -7,12 +7,19 @@ permalink: /quick_start
 
 ## TL;DR
 * [Sign up](https://genesis.whiteblock.io/)
-* Install the [CLI](#run-your-test-definition-file)
-* Download and [run](#run-your-test-definition-file) this Geth sample test: 
+* Install the CLI or download from [source](https://github.com/whiteblock/genesis-cli).
+```bash
+curl -sSf https://assets.whiteblock.io/cli/install.sh | sh
+```
+* Clone our [repository](https://github.com/whiteblock/genesis-examples) of ready-made examples
+```bash
+git clone https://github.com/whiteblock/genesis-examples.git
+```
+* Navigate to the `go-ethereum/simple-geth/` directory
+* [Run](#run-your-test-definition-file) a Geth testnet: 
 
   ```bash
-  curl https://raw.githubusercontent.com/whiteblock/genesis-examples/master/tutorials/tutorial.yaml >> geth.yaml
-  genesis run geth.yaml
+  genesis run geth.yaml <your username or organization name>
   ```
 
 Looking to quickly build your own test definition file? Use the instructions below. 
@@ -62,13 +69,16 @@ sidecars:
 task-runners:
   - name: task_1
     script:
-      inline: curl http://localhost:4000 >> output.json
+      inline: curl http://localhost:4000 >> /path/to/volume/output.json
     volumes:
-      - name: myOutputFile # name of the volume
-        path: /path/to/output.json  # path where the volume should be located
+      - name: myVolume # name of the volume
+        path: /path/to/volume  # path where the volume should be located
   - name: task_2
     script:
-      inline: print ${output.json}
+      inline: cat /path/to/volume/output.json
+    volumes:
+      - name: myVolume # name of the volume
+        path: /path/to/volume  # path where the volume should be located
   - name: task_3
     script: 
       inline: sleep 120 # pause for two minutes before moving on to the next task or process
@@ -157,22 +167,28 @@ tests:
         description: this phase runs second and reads from output.json
         tasks:
           - type: task_2
-          - type: task_3  
+          - type: task_3
+      - name: phase_3
+        description: this phase runs third and sleeps for 2 minutes
+        tasks:
+          - type: task_3             
 ```
 
 ## Run your Test Definition File
-### Step 1 - Download the Genesis CLI
+### Step 1 - Sign Up
+Sign up using the [Whiteblock Genesis Dashboard](https://genesis.whiteblock.io/)
+### Step 2 - Install the Genesis CLI
 ```bash
 curl -sSf https://assets.whiteblock.io/cli/install.sh | sh
 ```
 or download from [source](https://github.com/whiteblock/genesis-cli).
 
-### Step 2 - Run your Test
+### Step 3 - Run your Test
 ```bash
-genesis run <path to your YAML file> <your-organization-name>
+genesis run <path to your YAML file> <your-username>
 ```
 
-### Step 3 - View Logs from the Test
+### Step 4 - View Logs from the Test
 * Log into the [Genesis Dashboard](https://genesis.whiteblock.io/login).
 * Navigate to Logs in the left sidebar.
 

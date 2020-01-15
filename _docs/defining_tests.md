@@ -224,13 +224,13 @@ Task runners are first defined at the root level of the test definition document
 task-runners:
   - name: task_1
     volumes:
-      - name: myOutputFile # this volume will have read-write permissions, as that is the default
-        path: /path/to/output.json
+      - name: myVolume # this volume will have read-write permissions, as that is the default
+        path: /path/to/volume
     script:
-      inline: curl http://localhost:4000 >> output.json
+      inline: curl http://localhost:4000 >> /path/to/volume/output.json
   - name: task_2
     script:
-      inline: print ${/path/to/output.json}
+      inline: cat /path/to/volume/output.json
   - name: task_3
     script: 
       inline: curl http://localhost:4000 >> output_2.json  
@@ -569,14 +569,14 @@ For example, the contents of a volume can be used to determine a subsequent proc
 task-runners:
   - name: task_1
     volumes:
-      - name: myOutputFile
-        path: /path/to/output.json
+      - name: myVolume
+        path: /path/to/volume
         permissions: ro
     script:
-      inline: curl http://localhost:4000 >> output.json        
+      inline: curl http://localhost:4000 >> /path/to/volume/output.json        
   - name: task_2
     script:
-      inline: print ${/path/to/output.json}
+      inline: cat /path/to/volume/output.json
 tests:
   - name: test_1
     description: run a test
@@ -595,12 +595,12 @@ tests:
             - name: common-network
     phases:
       - name: phase_1
-        description: this phase runs first and writes to the volume "myOutputFile"
+        description: this phase runs first and writes to the file "output.json" in the volume "myVolume"
         tasks:
           - type: task_1
             timeout: 3 m
       - name: phase_2
-        description: this phase runs second and reads from myOutputFile
+        description: this phase runs second and reads from "output.json" in the volume "myVolume"
         tasks: 
           - type: task_2
             timeout: 3 m
