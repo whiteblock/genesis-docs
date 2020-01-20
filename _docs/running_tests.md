@@ -33,6 +33,8 @@ The naming of environment variables for sidecars is very similar to that of Serv
 * The service's IP in the sidecar network will be the instance name of service, i.e., `{service}_SERVICE{instance_no}`.
 * The sidecars' IP environment variables are formatted as though the service is their network. For example, to find the IP of a sidecar `soap-bar` to the 0th service instance of `foo-baz`, you would check the value of `SOAP_BAR_FOO_BAZ_SERVICE0`.
 
+Additionally, sidecars will have the env var "SERVICE", which will have the IP of its service in the network.
+
 ## Running Tests from the CLI
 
 Once you've created a [test definition](/defining_tests.html) to run, you can run them using our CLI tool with the following command:
