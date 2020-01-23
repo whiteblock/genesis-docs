@@ -8,6 +8,8 @@ Whiteblock Genesis uses a simple and declarative YAML format to describe your en
 
 The test definition format is formally defined as a JSON schema. We describe the format in depth here, and you may also refer to our [schema documentation](/schema.html) for a detailed, but shorter form reference.
 
+Alternatively, it is also possible to run tests on Whiteblock Genesis using a [`docker-compose.yml` file](/docker_compose.html).
+
 ## Document Structure
 
 Test definition files have two main sections. In the first section we define the reusable components of our system. In the second section, we define the tests that compose your system components into a running system and how to exercise that system.
