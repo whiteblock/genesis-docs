@@ -1,5 +1,5 @@
 ---
-title: Running Tests Using Docker-Compose
+title: Using Docker Compose
 tags: []
 author: whiteblock
 permalink: /docker_compose
@@ -11,8 +11,8 @@ genesis run -c <path to docker-compose.yml> <your username or organization name>
 ```
 
 ## Requirements
-There are a few requirements to the structure of the compose file you choose to run with Whiteblock Genesis: 
+There are a few requirements to the structure of the Compose file you choose to run with Whiteblock Genesis: 
 
-* The compose file you choose to run should follow the [Compose file version 3 guidelines](https://docs.docker.com/compose/compose-file/). 
-* Instead of build context, the compose file should pull from a Docker image.
+* The Compose file you choose to run should follow the [Compose file version 3 guidelines](https://docs.docker.com/compose/compose-file/). 
+* Build instructions are not currently supported.
 
