@@ -12,6 +12,8 @@
     title: Defining Tests
   - url: /running_tests.html
     title: Running Tests
+  - url: /docker_compose.html
+    title: Running Tests Using Docker-Compose
   - url: /analyzing_test_data.html
     title: Analyzing Test Data
 
