@@ -1261,7 +1261,7 @@ All items must be of the type: `string`
 
 #### count
 
-A positive integer that defines the number of instances of the service type to run.
+A positive integer that defines the number of instances of the service type to run. If not specified, it will default to 1.
 
 `count`
 
