@@ -104,14 +104,13 @@ tests:
     system:
       - name: alpha
         type: service_1
-        count: 1
+        count: 1 # the number of instances defaults to 1 unless otherwise specified by the `count` key.
         resources:
           networks:
             - name: common-network
             - name: alpha-network
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: common-network
@@ -137,14 +136,12 @@ tests:
     system:
       - name: alpha
         type: service_1
-        count: 1
         resources:
           networks:
             - name: common-network
             - name: alpha-network
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: common-network

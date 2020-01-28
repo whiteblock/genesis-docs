@@ -276,7 +276,7 @@ tests:
     system:
       - name: alpha
         type: service_1
-        count: 1
+        count: 1 # the number of instances defaults to 1 unless otherwise specified by the `count` key.        
         resources:
           networks:
             - name: individual_a
@@ -289,7 +289,6 @@ tests:
           type: sidecar_1                 
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: individual_b
@@ -319,8 +318,7 @@ Several networks may be defined in a `system` definition at the `resources` leve
 ```yaml
     system:
       - name: alpha
-        type: service_1
-        count: 1
+        type: service_1        
         resources:
           networks:
             - name: individual_a
@@ -330,7 +328,6 @@ Several networks may be defined in a `system` definition at the `resources` leve
               latency: 2 ms           
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: individual_b
@@ -350,7 +347,6 @@ Network impairments can be introduced when a network is defined at the `resource
     system:
       - name: alpha
         type: service_1
-        count: 1
         resources:
           networks:
             - name: common
@@ -430,7 +426,6 @@ An example can be seen below.
     system:
       - name: alpha
         type: service_1
-        count: 1
         resources:
           networks:
             - name: common
@@ -439,7 +434,6 @@ An example can be seen below.
               latency: 2 ms
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: common                                              
@@ -481,7 +475,6 @@ tests:
     system:
       - name: alpha
         type: service_1
-        count: 1
         resources:
           networks:
             - name: common
@@ -490,7 +483,6 @@ tests:
               latency: 2 ms
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: common                                              
@@ -585,13 +577,11 @@ tests:
     system:
       - name: alpha
         type: service_1
-        count: 1
         resources:
           networks:
             - name: common-network
       - name: beta
         type: service_2
-        count: 1
         resources:
           networks:
             - name: common-network
