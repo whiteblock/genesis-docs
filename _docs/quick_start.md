@@ -11,6 +11,11 @@ permalink: /quick_start
 ```bash
 curl -sSf https://assets.whiteblock.io/cli/install.sh | sh
 ```
+Run the following command to use the CLI in the same window:
+```bash
+source /path/to/.whiteblock/env
+```
+Otherwise, start a new shell.
 * Clone our [repository](https://github.com/whiteblock/genesis-examples) of ready-made examples
 ```bash
 git clone https://github.com/whiteblock/genesis-examples.git
