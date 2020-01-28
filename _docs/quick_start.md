@@ -13,7 +13,7 @@ curl -sSf https://assets.whiteblock.io/cli/install.sh | sh
 ```
 Run the following command to use the CLI in the same window:
 ```bash
-source /path/to/.whiteblock/env
+source ~/.whiteblock/env
 ```
 Otherwise, start a new shell.
 * Clone our [repository](https://github.com/whiteblock/genesis-examples) of ready-made examples
