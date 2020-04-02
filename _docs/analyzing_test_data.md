@@ -24,5 +24,3 @@ The `Tests` page in the [Whiteblock Genesis Dashboard](https://www.genesis.white
 
 You may choose to display logs according to the variety of filters offered by the Genesis Dashboard, including time, test ID, service, service instance number, sidecar, task, phase, among other options. 
 
-### Kibana
-Whiteblock Genesis uses [Kibana](https://www.elastic.co/products/kibana), an open source data visualization dashboard for [Elasticsearch](https://www.elastic.co/) and [Logstash](https://www.elastic.co/products/logstash), for faster and simpler log processing.
