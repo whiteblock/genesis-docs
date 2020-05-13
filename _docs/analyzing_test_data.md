@@ -24,3 +24,13 @@ The `Tests` page in the [Whiteblock Genesis Dashboard](https://www.genesis.white
 
 You may choose to display logs according to the variety of filters offered by the Genesis Dashboard, including time, test ID, service, service instance number, sidecar, task, phase, among other options. 
 
+
+## Logs 
+Whiteblock Genesis logs are in JSON line format, and are sent out via syslog-ng instances. An example of what to expect from a log line is this 
+```
+{"TESTRUN":"c43eb6e0-09e3-4adc-a11e-bbc723dc24a3","TEST":"geth_network_2_nodes","PRIORITY":"3","PHASE":"start","ORG":"e6bec93a-8fda-11ea-86e0-42010a90000d","NAME":"geth1-service0","MESSAGE":"INFO [05-13|14:05:45.132] Generating DAG in progress               epoch=1 percentage=39 elapsed=16.265s","IMAGE_NAME":"ethereum/client-go:alltools-latest","CONTAINER_TAG":"9bb1f8a9e6c0","CONTAINER_NAME":"geth1-service0"}
+```
+The tags allow you to easily identify the source of each log line, making processing easier. 
+
+### Connecting logs to your internal tool set
+It is easy to connect Genesis to your internal log processing tooling. All that is needed is a syslog compatible log server. To send the logs to this server, you can use the command `genesis settings set syslogng-host <host>` to set the host destination. Genesis will by default try to connect to tcp port 514 on this host. If you wish to change this, you can use the command `genesis settings set syslogng-port <port>` to set the port number, as well as  `genesis settings set syslogng-protocol <protocol>` to change to protocol. 
