@@ -28,6 +28,8 @@
   docs:
   - url: /schema.html
     title: Schema Reference
+  - url: /dsl.html
+    title: Genesis DSL
 
 - title: Help
   docs:
