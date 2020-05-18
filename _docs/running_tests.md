@@ -16,8 +16,8 @@ Once you've downloaded the Whiteblock Genesis CLI, run the following command to 
 genesis env <file>
 ```
 
-### Environment Variables for IPs
-The Genesis platform provides environment variables to give you the IP addresses of services in the network. All environment variables for IPs will be in all caps and also have `-` replaced with an underscore.
+## Environment Variables
+The Genesis platform provides environment variables to give you the IP addresses of services in the network. All environment variables for IPs will be in all caps and also have `-` replaced with an underscore. The platform also provides many other environment variables to enchance your experience.
 
 ### Services
 The environment variables for the IP addresses of Services will be of the following format: 
@@ -35,6 +35,12 @@ The naming of environment variables for sidecars is very similar to that of Serv
 
 Additionally, sidecars will have the env var "SERVICE", which will have the IP of its service in the network.
 
+### Misc
+* `INDEX` the index of the service e.g. 1
+* `INDEX_J2` the index of the service justified to 2 spaces e.g. 01
+* `INDEX_J3` the index of the service justified to 3 spaces e.g. 001
+* `NAME` the unique name of the service
+* `SERVICE` only for sidecars; contains the IP of the corresponding service
 ## Running Tests from the CLI
 
 Once you've created a [test definition](/defining_tests.html) to run, you can run them using our CLI tool with the following command:
