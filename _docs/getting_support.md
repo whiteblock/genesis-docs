@@ -14,4 +14,4 @@ You are welcome to join our [Telegram chat group](https://t.me/whiteblockio). Pl
 
 ## Submitting a Support Ticket
 
-If you have a business or enterprise plan, please contact your support representative. If you need help figuring out who that is, contact [info@whiteblock.io](mailto:info@whiteblock.io) with your inquiry and we will help you from there.
+If you have a business or enterprise plan, please contact your support representative. If you need help figuring out who that is, contact [support@whiteblock.io](mailto:support@whiteblock.io) with your inquiry and we will help you from there.

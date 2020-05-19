@@ -10,7 +10,7 @@ permalink: /running_tests
 The Whiteblock Genesis CLI is open source and available for download from our [Github repository](https://github.com/whiteblock/genesis-cli).
 
 ## Runtime Environment
-Once you've downloaded the Whiteblock Genesis CLI, run the following command to see the environment variables provided to your container: 
+Once you've downloaded the Whiteblock Genesis CLI, run the following command to see some of the environment variables provided to your container: 
 
 ```
 genesis env <file>
@@ -41,21 +41,17 @@ Additionally, sidecars will have the env var "SERVICE", which will have the IP o
 * `INDEX_J3` the index of the service justified to 3 spaces e.g. 001
 * `NAME` the unique name of the service
 * `SERVICE` only for sidecars; contains the IP of the corresponding service
+
 ## Running Tests from the CLI
 
 Once you've created a [test definition](/defining_tests.html) to run, you can run them using our CLI tool with the following command:
 
-```
-genesis run test-definition.yml
+```bash
+genesis run <test-definition.yml>
 ```
 
 Where `test-definition.yml` is the path to your test definition file on your local filesystem.
 
-## Running Tests from the Whiteblock Genesis Dashboard
-
-To run a test via the Whiteblock Genesis web dashboard, simply drag your test file into the upload element of our webpage as shown below.
-
-![upload](/assets/img/upload.gif)
 
 ## Understanding Test Results
 
