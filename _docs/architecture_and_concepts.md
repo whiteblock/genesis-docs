@@ -5,10 +5,8 @@ author: whiteblock
 permalink: /architecture
 ---
 
-
 ## General Overview
 Genesis works by building a fresh, reproducible environment on cloud infrastructure. When you run a test, Genesis tells the cloud provider to create the VMs to provide the infrastructure for the Biome. It then configures those VMs and distributes the services among them as specified in the YAML test file.
-
 
 ## The Biome
 
