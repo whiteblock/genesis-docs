@@ -1,0 +1,23 @@
+@startuml
+
+rectangle "Biome" {
+    rectangle "Virtual Machine 1" {
+     node your-service0 as n0{
+     }
+     
+     node your-service1 as n1 {
+        
+     }
+    
+    }
+    
+    rectangle "Virtual Machine 2" {
+        node your-service2 as n4{
+     }
+     
+     node your-service3 as n3{
+     }
+    
+    }
+}
+@enduml

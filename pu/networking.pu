@@ -1,0 +1,27 @@
+@startuml
+
+rectangle "sidecar-network"{
+    node "serv-service0\nService"{
+    
+    }
+    
+    node "serv-service0-side\nSidecar" {
+    
+    }
+}
+
+rectangle "serv-service0"{
+    node "serv-service0"{
+    
+    }
+    
+    node "serv-service1" {
+    
+    }
+    
+    node "other-serv-service0" {
+    
+    }
+}
+
+@enduml
