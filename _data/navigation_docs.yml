@@ -4,6 +4,8 @@
     title: Introduction
   - url: /introduction_to_testing.html
     title: Introduction to Testing Distributed Systems
+  - url: /architecture.html
+    title: Architecture And Concepts
 - title: Getting Started
   docs:
   - url: /quick_start.html
