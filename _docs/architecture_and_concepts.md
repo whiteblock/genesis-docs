@@ -37,3 +37,8 @@ And for the sidecar networks, you would have:
 ![sidecar network](/assets/img/sidecar_network.png)
 
 It is important to note that sidecars cannot communicate with another service's sidecars nor can they communicate with any other sidecar. They are effectively isolated from the rest of the network. If you wish for this connectivity, then you should use a service instead of a sidecar. 
+
+## Logging w/ Splunk
+We use syslog-ng to aggregate the logs on each VM from all of the containners (task-runners, sidecars, and services). Once aggregated, these logs are then forwarded to the log collector you have setup in your settings. You can use other log collectors, as long as they support the syslog_message format and can process json lines from that. However, for the best experience, we suggest using [Splunk](https://www.splunk.com).
+
+![log collection](/assets/img/log_collection.png)

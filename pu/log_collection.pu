@@ -1,0 +1,38 @@
+@startuml
+
+rectangle "Biome" {
+    rectangle "Virtual Machine 1" {
+     node your-service0 as n0{
+     }
+     
+     node your-service1 as n1 {
+        
+     }
+     rectangle syslog-ng as syslog {
+     
+     }
+     n1 -down-> syslog
+     n0 -down-> syslog
+     syslog -down-> splunk
+    }
+    
+    rectangle "Virtual Machine 2" {
+        node your-service2 as n4{
+     }
+     
+     node your-service3 as n3{
+     }
+     
+     rectangle syslog-ng2 as syslog2 {
+     
+     }
+     n4 -down-> syslog2
+     n3 -down-> syslog2
+     syslog2 -down-> splunk
+    }
+}
+
+rectangle Splunk as splunk {
+    
+}
+@enduml
