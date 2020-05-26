@@ -26,3 +26,10 @@ It will then ask you for the zone to build in, the image name (what you called i
 
 ## AWS
 Coming soon!
+
+
+
+## Diagnosing Build Issues
+
+### Debug Mode
+The default behavior for Genesis is to immediately teardown all involved instances once a test has reached an error state. You can add the flag `--debug-mode` to your genesis run command to tell it to avoid tearing down your instance. 
