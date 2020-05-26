@@ -14,6 +14,8 @@
     title: Defining Tests
   - url: /running_tests.html
     title: Running Tests
+  - url: /my_infra.html
+    title: Setting Up Genesis On Your Cloud Infrastructure
   - url: /docker_compose.html
     title: Running Tests Using Docker-Compose
   - url: /analyzing_test_data.html
