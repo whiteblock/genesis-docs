@@ -1,5 +1,5 @@
 ---
-title: Using Docker Compose
+title: Running on external infrastructure
 tags: []
 author: whiteblock
 permalink: /my_infra
