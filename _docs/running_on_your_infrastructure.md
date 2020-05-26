@@ -3,6 +3,7 @@ title: Running on external infrastructure
 tags: []
 author: whiteblock
 permalink: /my_infra
+---
 
 ## Google Cloud Platform
 

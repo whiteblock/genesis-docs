@@ -38,16 +38,6 @@ To reset your password:
 
 You've successfully changed your password.
 
-### Manage Notification Settings
-To manage notification preferences for your account:
-
-1. Go to your Account Settings, located in the bottom-left corner.
-2. Click Settings.
-3. On the Your Account page, a list of Notifications appears.
-4. Use the toggles on the left to select which notifications you do or don't want to receive. Changes are saved automatically.
-
-Your notification preferences have been updated.
-
 ### Update Payment Information
 Team Members in your Organization with the Role of Administrator or Owner can makes changes to the payment information on file.
 
