@@ -14,6 +14,21 @@ We assume here that you already have registered with GCP and have the gcloud too
 The first step in having Genesis deploy to your infrastructure, is to have import the image into compute.
 The gcloud tool makes this super easy! Just run the command `gcloud compute images import wb-biome --os=ubuntu-1804 --source-file=gs://assets.whiteblock.io/images/biome.qcow2` and it will import our image as an image named "wb-biome". You can name it whatever you want, but take note of what you name it for the next step.
 
+### Configuring the Network/Firewall
+First, let's create the compute network, this command may take a couple minutes to complete.
+`gcloud compute networks create whiteblock`
+Note: Only use this network for Whiteblock Genesis biomes, these configuration options turn off firewall protection for the network we just created. 
+To expose everything on the newly created whiteblock network, run the command:
+`gcloud compute firewall-rules create whiteblock-open --network whiteblock --allow tcp,udp,icmp --source-ranges 0.0.0.0/0`
+This gives you the greatest ability to interact with the network, without this you wouldn't be able to arbitrarily open ports and access them externally.
+
+#### Genesis Secure Setup
+If you are an enterprise tier client and have special needs for security or just want more security for your genesis test networks. Please contact support at support@whiteblock.io so we may work with you to ensure the strictest policies that function.
+
+For non-enterprise tier clients, you can try using the command:
+`gcloud compute firewall-rules create whiteblock-open --network whiteblock --allow tcp:22,tcp:2376 --source-ranges 0.0.0.0/0`
+Those 2 ports are the bare minimum for Genesis to function, but keep in mind that certain functionality such as global volumes and port-mapping will no longer work. 
+
 ### Configuring the CLI
 Run the command `genesis cloud` to start the cli wizard which will guide you through the setup.
 It will first ask you which provide you wish to use, in this case, that would be gcp.
