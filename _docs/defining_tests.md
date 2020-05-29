@@ -4,6 +4,7 @@ tags: []
 author: whiteblock
 permalink: /defining_tests
 ---
+
 Whiteblock Genesis uses a simple and declarative YAML format to describe your end-to-end test to execute. We refer to this format as our test definition format, and files that are written in this format as test definition files. Test definition files are declarative in that they let you simply describe the system you want to test and the way in which you want to test it, and Whiteblock Genesis does the work necessary to deploy and test that system.
 
 The test definition format is formally defined as a JSON schema. We describe the format in depth here, and you may also refer to our [schema documentation](/schema.html) for a detailed, but shorter form reference.
@@ -190,7 +191,6 @@ sidecars:
         permissions: ro
       - name: errorLog # this volume will have read-write permissions, as that is the default
         path: /var/log/nginx/error.log
-
 ...
 ```
 
@@ -213,7 +213,6 @@ sidecars:
         permissions: ro
       - name: errorLog # this volume will have read-write permissions, as that is the default
         path: /var/log/nginx/error.log
-
 ...
 ```
 
@@ -399,10 +398,8 @@ Phases are executed in sequence, starting with the first phase defined in your `
 
 ```yaml
     phases:
-      - name: phase_1
-        description: this phase will run first
-      - name: phase_2 
-        description: this phase will run second
+      - name: phase_1 # this phase will run first
+      - name: phase_2 # this phase will run second
 ```
 
 #### Changing Your System Definition
@@ -442,8 +439,7 @@ An example can be seen below.
         description: this phase will run first
         tasks:
         - type: task_1
-      - name: phase_2 
-        description: this phase will mutate the system and run second
+      - name: phase_2 # this phase will mutate the system and run second
         system:
           - name: alpha
             type: service_1
@@ -451,16 +447,14 @@ An example can be seen below.
               cpus: 2
         tasks: 
         - type: task_2
-      - name: phase_3
-        description: this phase will revert the system and run third  
+      - name: phase_3 # this phase will revert the system and run third  
         system: 
           - name: alpha
             type: service_1
             resources:
               cpus: 1
         tasks: 
-        - type: task_3
-          description: this task runs third           
+        - type: task_3 # this task runs third           
 ```
 
 #### Removing Services from a System
@@ -492,8 +486,7 @@ tests:
         tasks:
         - type: task_1
           description: this task runs first
-      - name: phase_2 
-        description: this phase will mutate the system and run second
+      - name: phase_2 # this phase will mutate the system and run second
         system:
           - name: alpha
             type: service_1
@@ -502,43 +495,33 @@ tests:
         remove:
           - beta      
         tasks: 
-        - type: task_2
-          description: this task runs second
+        - type: task_2 # this task runs second
 ```
 
 A service instance may be added back into the system in later phases by defining it in the `system` definition at the phase level with the`name` and `type` keys, as illustrated in the `phase_3` definition below.
 
 ```yaml
     phases:
-      - name: phase_1
-        description: this phase will run first
+      - name: phase_1 # this phase will run first
         tasks:
-        - type: task_1
-          description: this task runs first
-      - name: phase_2 
-        description: this phase will mutate the system and run second
+        - type: task_1 # this task runs first
+      - name: phase_2 # this phase will mutate the system and run second
         system:
-          - name: alpha
-            type: service_1
+          - type: service_1
             resources:
               cpus: 2
         remove:
           - beta      
         tasks: 
-        - type: task_2
-          description: this task runs second
-      - name: phase_3
-        description: this phase will revert the system, reinstate service_2 and run third  
+        - type: task_2 # this task runs second
+      - name: phase_3 # this phase will revert the system, reinstate service_2 and run third  
         system: 
-          - name: alpha
-            type: service_1
+          - type: service_1
             resources:
               cpus: 1
-          - name: beta
-            type: service_2     
+          - type: service_2     
         tasks: 
-        - type: task_3
-          description: this task runs third     
+        - type: task_3 # this task runs third     
 ```
 
 #### Tasking a System
@@ -572,8 +555,7 @@ task-runners:
     script:
       inline: cat /path/to/volume/output.json
 tests:
-  - name: test_1
-    description: run a test
+  - name: test_1 # run a test
     system:
       - name: alpha
         type: service_1
@@ -586,13 +568,11 @@ tests:
           networks:
             - name: common-network
     phases:
-      - name: phase_1
-        description: this phase runs first and writes to the file "output.json" in the volume "myVolume"
+      - name: phase_1 # this phase runs first and writes to the file "output.json" in the volume "myVolume"
         tasks:
           - type: task_1
             timeout: 3 m
-      - name: phase_2
-        description: this phase runs second and reads from "output.json" in the volume "myVolume"
+      - name: phase_2 # this phase runs second and reads from "output.json" in the volume "myVolume"
         tasks: 
           - type: task_2
             timeout: 3 m
