@@ -8,4 +8,4 @@ permalink: /faq
 ### Do you support my system?
 
 We are completely system agnostic, we only require a containerized architecture.
-If you can deploy your system on Kubernetes or Docker Compose, then you can use Genesis!
+If you can deploy your system on Kubernetes or Docker Compose, then you can use Genesis! If you aren't already containerized, it is easy to get setup for most modern applications! You can find more information [here](https://docs.docker.com/get-started/).
