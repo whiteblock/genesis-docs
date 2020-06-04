@@ -16,6 +16,8 @@
     title: Defining Tests
   - url: /running_tests.html
     title: Running Tests
+  - url: /troubleshooting
+    title: Troubleshooting Guide
   - url: /cicd.html
     title: Running on CI/CD
   - url: /my_infra.html
