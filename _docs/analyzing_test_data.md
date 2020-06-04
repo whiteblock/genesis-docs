@@ -34,3 +34,5 @@ The tags allow you to easily identify the source of each log line, making proces
 
 ### Connecting logs to your internal tool set
 It is easy to connect Genesis to your internal log processing tooling. All that is needed is a syslog compatible log server. To send the logs to this server, you can use the command `genesis settings set syslogng-host <host>` to set the host destination. Genesis will by default try to connect to tcp port 514 on this host. If you wish to change this, you can use the command `genesis settings set syslogng-port <port>` to set the port number, as well as  `genesis settings set syslogng-protocol <protocol>` to change to protocol. 
+
+Note: Settings are organization wide, all users in the same org will have the same settings. If you wish to have separate settings, you can either use your personal organization (your username) or contact us for a more customized solution
