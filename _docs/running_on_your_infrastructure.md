@@ -41,29 +41,10 @@ It will then ask you for the zone to build in, the image name (what you called i
 
 ## AWS
 
+AWS support is coming soon
+
 ### Getting Started
 We assume that you already have the AWS CLI properly setup. If you do not have the AWS cli setup, you can follow [these instructions](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) to get started.
-
-### Importing the base image
-In order to import the image, you must first creates a file called `image.json` with the following contents.
-
-```json
- {
-     "Description": "The Whiteblock Genesis base image",
-     "Format": "raw",
-     "Url": "https://assets.whiteblock.io/images/biome.raw"
- }
-```
-Then, you will need to run this command to create a snapshot.
-```bash
-aws ec2 import-snapshot --description "The Whiteblock Genesis base image" --disk-container file://image.json
-
-```
-Finally you will need to follow the instructions [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot) to turn this into a AMI which can be used by Genesis. 
-
-
-### Configuring the CLI
-
 
 ## Diagnosing Build Issues
 
