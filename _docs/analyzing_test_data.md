@@ -19,13 +19,7 @@ Sidecars are supplemental services that can enhance or provide utility to main s
 
 ## Inspecting & Analyzing Test Data
 
-### Whiteblock Genesis Dashboard
-The `Tests` page in the [Whiteblock Genesis Dashboard](https://www.genesis.whiteblock.io/login) shows data related to the test you've submitted, such as its current status, its current phase, and its up-to-date logs. 
-
-You may choose to display logs according to the variety of filters offered by the Genesis Dashboard, including time, test ID, service, service instance number, sidecar, task, phase, among other options. 
-
-
-## Logs 
+### Logs 
 Whiteblock Genesis logs are in JSON line format, and are sent out via syslog-ng instances. An example of what to expect from a log line is this 
 ```
 {"TESTRUN":"c43eb6e0-09e3-4adc-a11e-bbc723dc24a3","TEST":"geth_network_2_nodes","PRIORITY":"3","PHASE":"start","ORG":"e6bec93a-8fda-11ea-86e0-42010a90000d","NAME":"geth1-service0","MESSAGE":"INFO [05-13|14:05:45.132] Generating DAG in progress               epoch=1 percentage=39 elapsed=16.265s","IMAGE_NAME":"ethereum/client-go:alltools-latest","CONTAINER_TAG":"9bb1f8a9e6c0","CONTAINER_NAME":"geth1-service0"}
