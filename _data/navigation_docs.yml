@@ -20,6 +20,8 @@
     title: Troubleshooting Guide
   - url: /cicd.html
     title: Running on CI/CD
+  - url: /testing_smart_contracts.html
+    title: Testing your smart contracts
   - url: /my_infra.html
     title: Setting Up Genesis On Your Cloud Infrastructure
   - url: /docker_compose.html
