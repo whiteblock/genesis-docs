@@ -42,6 +42,8 @@
     title: Schema Reference
   - url: /dsl.html
     title: Genesis DSL
+  - url: /runtime_environment.html
+    title: Getting to know the runtime environment
 
 - title: Help
   docs:

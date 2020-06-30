@@ -126,9 +126,6 @@ The `destination-path` field is expected to be the path to which the local file 
 
 Service definitions can specify the vCPU core count, system memory, and storage that the service requires to perform effectively. 
 
-Services will be run on Intel Cascade Lake vCPUs with a base frequency of 2.8 GHz and a sustained all core turbo of 3.4 GHz. Storage will be allocated from NVMe SSDs connected to the host machine via a PCI Express bus.
-
-Memory and vCPUs can be specified up to the limits that your subscription tier allows, with a maximum of 64 vCPU cores and 128GiB of memory per service instance. Up to 180 GiB of storage can be provisioned per service instance as well, with no additional limits imposed by your subscription tier.
 
 Hardware requirements can be specified for your service as shown in the example below, under the `resources` key:
 
