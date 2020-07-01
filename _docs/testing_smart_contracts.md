@@ -5,21 +5,6 @@ author: whiteblock
 permalink: /testing_smart_contracts
 ---
 
-## How to test your smart contract in Genesis
-
-
-
-### Uploading
-
-
-
-### Compilation
-
-
-
-### Deployment
-
-
 
 ## How to get the most out of smart contract testing with Genesis
 
