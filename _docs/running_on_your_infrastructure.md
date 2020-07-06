@@ -41,12 +41,10 @@ It will then ask you for the zone to build in, the image name (what you called i
 
 ## AWS
 
-AWS support is coming soon
-
 ### Getting Started
-We assume that you already have the AWS CLI properly setup. If you do not have the AWS cli setup, you can follow [these instructions](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) to get started.
+Getting Started with AWS is super easy. 
+Simply run the command `genesis cloud`, select the aws provider, and then simply provide answers to the guided setup.
 
-## Diagnosing Build Issues
+#### Notice
+AWS support is still considered experimental. There are many unstable features, and some features may not work in AWS. If you encounter any issues with the AWS implementation. 
 
-### Debug Mode
-The default behavior for Genesis is to immediately teardown all involved instances once a test has reached an error state. You can add the flag `--debug-mode` to your genesis run command to tell it to avoid tearing down your instance. 
